@@ -261,7 +261,10 @@ void Chip8::execute() {
 		case 0xE000:
 			switch (opcode.NN) {
 				case 0x009E:
-					// Implementar
+					std::cout << "SKIP NEXT !EQ, Key(0x" << std::hex << (int)this->registers.V[opcode.X] << "), 0x0" << std::endl;
+					if (this->keyboard.getKeyState(this->registers.V[opcode.N]) != 0x0) {
+						this->registers.pc += 2;
+					}
 					this->registers.pc += 2;
 					break;
 				case 0x00A1:
@@ -297,7 +300,14 @@ void Chip8::execute() {
 					this->registers.pc += 2;
 					break;
 				case 0x001E:
-					// Implementar
+					std::cout << "ADD I, I, V" << opcode.X << std::endl;
+					if (this->registers.I + this->registers.V[opcode.X] > 0xFFF) {
+						this->registers.V[0xF] = 0x1;
+					}
+					else {
+						this->registers.V[0xF] = 0x0;
+					}
+					this->registers.I += this->registers.V[opcode.X];
 					this->registers.pc += 2;
 					break;
 				case 0x0029:
