@@ -1,8 +1,0 @@
-﻿  stdafx.cpp
-  Chip8.cpp
-c:\devtools\repository\chip8emulator\chip8.cpp(52): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-c:\devtools\repository\chip8emulator\chip8.cpp(334): warning C4018: '<': signed/unsigned mismatch
-c:\devtools\repository\chip8emulator\chip8.cpp(358): warning C4244: 'initializing': conversion from 'std::streamoff' to 'int', possible loss of data
-  Chip8Emulator.cpp
-  Generating Code...
-  Chip8Emulator.vcxproj -> C:\DevTools\repository\x64\Debug\Chip8Emulator.exe
