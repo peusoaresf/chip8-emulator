@@ -5,7 +5,6 @@
 #include <fstream>
 
 #define SDL_MAIN_HANDLED
-// LEARNINGS: SDL2 in macos will lookup a linked FRAMEWORK of the same name
 #include <SDL2/SDL.h>
 
 #define WINDOW_WIDTH 64
@@ -31,6 +30,7 @@ int main(void) {
 	SDL_RenderPresent(renderer);
 
 	Chip8 *chip8 = new Chip8();
+  // TODO: accept path to rom at startup time?
 	chip8->loadProgram("/Users/ferraped/Projects/personal/chip8-emulator/roms/brick.ch8");
 
 	bool quit = false;
