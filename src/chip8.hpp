@@ -1,5 +1,5 @@
 class Chip8 {
-	private: 
+	private:
 		unsigned char delayTimer;
 		unsigned char soundTimer;
 
@@ -24,7 +24,7 @@ class Chip8 {
 
 		struct Registers {
 			public:
-				unsigned int I;				
+				unsigned int I;
 				unsigned int pc;
 				unsigned char V[16];
 		} registers;
@@ -42,7 +42,7 @@ class Chip8 {
 		struct Keyboard {
 			private:
 				unsigned char keys[16];
-			public: 				
+			public:
 				struct KeyCode {
 					const unsigned char Key_1 = 0x0;
 					const unsigned char Key_2 = 0x1;
@@ -61,13 +61,13 @@ class Chip8 {
 					const unsigned char Key_C = 0xE;
 					const unsigned char Key_V = 0xF;
 				} keyCode;
-				void init(); 				
+				void init();
 				void setKeydown(unsigned char key);
 				void setKeyup(unsigned char key);
 				unsigned char getKeyState(unsigned char keyIndex);
 		} keyboard;
 
-		bool drawFlag;		
+		bool drawFlag;
 		unsigned char gfx[64 * 32];
 
 		Chip8();

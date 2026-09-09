@@ -194,11 +194,11 @@ void Chip8::execute() {
 					this->registers.pc += 2;
 					break;
 				case 0x0007:
-					// Implementar
+					// TODO: Unimplemented
 					this->registers.pc += 2;
 					break;
 				case 0x000E:
-					// Implementar
+					// TODO: Unimplemented
 					this->registers.pc += 2;
 					break;
 				default:
@@ -286,7 +286,7 @@ void Chip8::execute() {
 					this->registers.pc += 2;
 					break;
 				case 0x000A:
-					// Implementar
+					// TODO: Unimplemented
 					this->registers.pc += 2;
 					break;
 				case 0x0015:
@@ -295,7 +295,7 @@ void Chip8::execute() {
 					this->registers.pc += 2;
 					break;
 				case 0x0018:
-					// Implementar
+					// TODO: Unimplemented
 					this->registers.pc += 2;
 					break;
 				case 0x001E:
@@ -325,7 +325,7 @@ void Chip8::execute() {
 					break;
 				}
 				case 0x0055:
-					// Implementar
+					// TODO: Unimplemented
 					this->registers.pc += 2;
 					break;
 				case 0x0065:
