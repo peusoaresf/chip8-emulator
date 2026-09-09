@@ -112,4 +112,6 @@ A few things I still wish to add to the emulator are:
 
 5. Improve logging;
 
-6. Improve compilation times (maybe I'm rebuilding stuff unnecessarily even when just certain source files change ?).
+6. Improve compilation times (maybe I'm rebuilding stuff unnecessarily even when just certain source files change ?);
+
+7. Include SDL binaries for window or linux and make the project multi-platform. 
