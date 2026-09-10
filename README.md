@@ -8,9 +8,11 @@ You'll find all of the specs for this, let's say "virtual cpu", [here](https://e
 
 To quickly get up and running make sure you are on MacOS, then:
 
-1. Run `make mac` to build an executable;
+1. Simply execute `make run`, which in turn will:
 
-2. Then simply `make run` to start the emulator.
+    - Download the SDL2 library;
+    - Compile the source code against it;
+    - Run the executable.
 
 Et voilà!
 
@@ -97,6 +99,8 @@ SDL_CreateWindowAndRenderer(WINDOW_WIDTH * 10, WINDOW_HEIGHT * 10, 0, &window, &
 ```
 
 Bringing us to a more manageable 640x320 window without any framebuffer logic change!! 
+
+3. After realizing that it might be a bit unnecessary to keep so many SDL source files in version control, and that it's easily automatable downloading it from the internet, I added a make recipe `pull-packages-mac` that: downloads the `.dmg` file, mounts it, copies files over to the expected folder structure as explained before (`packages/mac/SDL2.framework`) and unmounts and removes the downloaded `.dmg`.
 
 ## Wishlist
 
